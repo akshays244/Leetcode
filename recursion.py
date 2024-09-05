@@ -1,8 +1,10 @@
-def chaap(n):
-    if n >0:
-        print(n)
-        return chaap(n-1)
+def print1ton(n):
+    if n ==1:
+        return 1
+    print1ton(n-1)
+    print(n)
 
-chaap(15)
+
+print1ton(15)
 
 #change check
