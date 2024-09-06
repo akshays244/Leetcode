@@ -1,11 +1,20 @@
 def fibo(n):
-    if n==2:
-        return 1+fibo(n-1)
+    if n==0:
+        print(0)
     elif n==1:
-        return 0
+        print(0)
+        print(1)
 
-    k = fibo(n-1)+fibo(n-2)
-    return k
-    #print(n)
+    a=0
+    b=1
+    print(a)
+    print(b)
 
-print(fibo(5))
+    for i in range(2,n):
+        c=a+b
+        print(c)
+        a=b
+        b=c
+
+
+fibo(10)
