@@ -67,7 +67,7 @@ def removeElement(nums, val):
 
 
 
-    return nums
+    return len(nums)
 
-print(removeElement([0,1,2,2,3,0,4,2] ,2))
+print(removeElement([3,2,2,3] ,3))
 
