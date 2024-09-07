@@ -1,19 +1,24 @@
-def fibo(n):
-    if n>=3:
-        #print(fibo(n-1) + fibo(n-2))
-        return fibo(n-1) + fibo(n-2)
-    elif n==0:
-        #print(0)
+def fibonacci_sequence(n, current=0):
+    # Base case: Stop recursion when current reaches n
+    if current == n:
+        return
+
+    # Print the Fibonacci number for the current index
+    print(fibonacci(current), end=" ")  # end=" " keeps the numbers on the same line
+
+    # Recursively call the function to print the next Fibonacci number
+    fibonacci_sequence(n, current + 1)
+
+
+# Helper function to calculate the Fibonacci number at a given index
+def fibonacci(num):
+    if num == 0:
         return 0
-    elif n==1:
-        #print(1)
-        return 1
-    elif n==2:
-        #print(0)
-        #print(1)
+    elif num == 1:
         return 1
     else:
-        print("wrong input type")
+        return fibonacci(num - 1) + fibonacci(num - 2)
 
 
-print(fibo(9))
+# Call the function to print the Fibonacci sequence for n=5
+fibonacci_sequence(20)
