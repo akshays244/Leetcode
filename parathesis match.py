@@ -44,4 +44,4 @@ def isValid(s):
     else:
         return False
 
-print(isValid("     {}   "))
+print(isValid("   ([)] "))
