@@ -1,28 +1,18 @@
-def lengthOfLongestSubstring(s):
-    a=[]
-    ai=[]
-    i=0
-    j=1
-    if s=="" :
-        return ""
-    else:
-        a.append(s[0])
-    while j <len(s):
-        if s[i]!=s[j] and s[i] not in a:
-            a.append(s[i])
-            ai.append(i)
-        elif s[i] == s[j] and s[i] not in a:
-            j+=1
-            i+=1
+def longest_substring_with_list(s):
+    char_list = []  # List to store current substring without repeating characters
+    max_len = 0  # Maximum length of the substring
 
-        i+=1
-        j+=1
+    for char in s:
+        # If the character is already in the list, remove characters from the left until it's gone
+        while char in char_list:
+            char_list.pop(0)  # Remove the first character (from the left)
 
-    print(ai)
-    print(a)
-    if s=="" :
-        return ""
-    else:
-        return len(a)
+        char_list.append(char)  # Add the current character to the list
 
-print(lengthOfLongestSubstring("abcabcaa"))
+        # Update max_len if the current substring is longer
+        max_len = max(max_len, len(char_list))
+
+    return max_len
+
+
+print(longest_substring_with_list(""))
