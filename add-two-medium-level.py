@@ -15,4 +15,4 @@ def longest_substring_with_list(s):
     return max_len
 
 
-print(longest_substring_with_list(""))
+print(longest_substring_with_list("abcdabs"))
